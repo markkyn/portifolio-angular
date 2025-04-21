@@ -1,4 +1,12 @@
-FROM ubuntu:latest
-LABEL authors="marco"
+FROM node:latest
 
-ENTRYPOINT ["top", "-b"]
+WORKDIR /app
+
+COPY . .
+
+RUN npm install
+RUN npm install @angular/cli -g
+
+EXPOSE 4200
+CMD ["ng", "serve", "--hmr", "--host", "0.0.0.0"]
+
