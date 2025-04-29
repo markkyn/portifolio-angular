@@ -1,4 +1,9 @@
 services:
   web:
-    command:
-      - 'ng serve host'
+    build:
+      dockerfile: Dockerfile
+    command: ["ng", "serve","--hmr","--poll", "500", "--host", "0.0.0.0"]
+    volumes:
+      - .:/app
+    ports:
+      - "4200:4200"
