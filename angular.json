@@ -27,8 +27,15 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "src/assets/styles/reset.css",
+              "src/assets/styles/colors.scss"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/assets/styles"
+              ]
+            },
             "scripts": []
           },
           "configurations": {
@@ -85,7 +92,9 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              "src/assets/styles/reset.css",
+              "src/assets/styles/colors.scss"
             ],
             "scripts": []
           }
