@@ -8,13 +8,13 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create thess app', () => {
+  it('should create these app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'Portifossssliosss' title`, () => {
+  it(`should have the 'Portifolio' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app.title).toEqual('Portifolio');
