@@ -2,10 +2,34 @@
 @use "./assets/styles/_colors.scss" as c;
 @use "./assets/styles/_typography.scss" as t;
 
+@import './assets/styles/reset.css';
+
 body {
   background-color: c.$primary-dark;
+  font-family: t.$font-family-primary;
+  font-size: t.$font-size-base;
+  font-weight: t.$font-weight-regular;
+  line-height: t.$line-height-base;
+  letter-spacing: t.$letter-spacing-normal;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: t.$font-family-secondary;
+  font-weight: t.$font-weight-bold;
+  line-height: t.$line-height-heading;
+  letter-spacing: t.$letter-spacing-wide;
+  margin-top: 0;
+}
+
+p {
+  font-family: t.$font-family-primary;
+  font-size: t.$font-size-base;
+  font-weight: t.$font-weight-regular;
+  line-height: t.$line-height-base;
+  letter-spacing: t.$letter-spacing-normal;
+  margin-top: 0;
+  margin-bottom: 1em;
+}
 
 html, body {
   min-height: 100vh;
@@ -15,118 +39,4 @@ html, body {
 
 body {
   margin: 0;
-}
-
-footer {
-  width: 100%;
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  z-index: 100;
-  
-  #top-footer {
-    background-color: c.$secondary-dark;
-    padding: 20px 0 10px 0;
-    text-align: center;
-    font-size: 14px;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 16px;
-  }
-
-  #bottom-footer {
-    background-color: c.$neutral;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 14px;
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
-    color: c.$primary-light;
-    font-family: t.$font-family-secondary;
-  }
-  
-}
-
-.footer-col {
-  flex: 1 1 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.footer-links {
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    margin-bottom: 8px;
-  }
-
-  a {
-    color: c.$primary-light;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-
-  a:hover {
-    color: c.$secondary-light;
-  }
-}
-
-.footer-social strong {
-  color: c.$primary-light;
-  margin-bottom: 6px;
-  display: block;
-}
-
-.social-links {
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-  margin-top: 4px;
-}
-
-.social-links a {
-  color: c.$secondary-light;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.social-links a:hover {
-  color: c.$primary-light;
-}
-
-
-@media (max-width: 600px) {
-  #top-footer, #bottom-footer {
-    font-size: 12px;
-    padding: 10px 0;
-  }
-  footer {
-    border-radius: 0;
-  }
-}
-
-@media (max-width: 800px) {
-  #top-footer {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-  }
-  .footer-col {
-    align-items: center;
-    margin-bottom: 8px;
-  }
 }
