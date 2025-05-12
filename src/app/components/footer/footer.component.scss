@@ -2,42 +2,44 @@
 @use "../../../assets/styles/_typography.scss" as t;
 
 footer {
-    width: 100%;
-    margin-top: auto;
+  width: 100%;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+    
+  #top-footer {
+    background-color: c.$black;
+    padding: 40px 20% 10px 20%;
+    text-align: center;
+    font-size: 14px;
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    z-index: 100;
-    
-    #top-footer {
-      background-color: c.$secondary-dark;
-      padding: 40px 20% 10px 20%;
-      text-align: center;
-      font-size: 14px;
-      border-top-left-radius: 12px;
-      border-top-right-radius: 12px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 16px;
-    }
-  
-    #bottom-footer {
-      background-color: c.$neutral;
-      padding: 30px 0;
-      text-align: center;
-      font-size: 14px;
-      border-bottom-left-radius: 12px;
-      border-bottom-right-radius: 12px;
-      color: c.$primary-light;
-      font-family: t.$font-family-secondary;
-    }
-    
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
   }
+  
+  #bottom-footer {
+    background-color: c.$dark-gray;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    color: c.$primary-light;
+    font-family: t.$font-family-secondary;
+  }
+
+  #footer-cv {
+    color: c.$primary-light;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+    
+}
   
   .footer-col {
     flex: 1 1 0;
@@ -72,6 +74,7 @@ footer {
     color: c.$primary-light;
     margin-bottom: 6px;
     display: block;
+    font-size: 24px;
   }
   
   .social-links {
@@ -79,19 +82,18 @@ footer {
     flex-direction: row;
     gap: 12px;
     margin-top: 4px;
+
+    a {
+      color: c.$secondary-light;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    a:hover {
+      color: c.$primary-light;
+    }
   }
-  
-  .social-links a {
-    color: c.$secondary-light;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
-  }
-  
-  .social-links a:hover {
-    color: c.$primary-light;
-  }
-  
   
   @media (max-width: 600px) {
     #top-footer, #bottom-footer {
