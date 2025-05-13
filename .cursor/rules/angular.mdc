@@ -1,0 +1,36 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Arquitetura do Projeto
+
+O projeto utiliza o framework Angular (19.2.0) e SASS. Ainda, utiliza-se PrimeNG (19.1.2) como biblioteca de estilos. 
+
+Em src/assets/styles/ existem 2 arquivos de variaveis para uso de coloração e tipografia ([_colors.scss](mdc:src/assets/styles/_colors.scss) e [_typography.scss](mdc:src/assets/styles/_typography.scss)). Em arquivos SCSS que utilizam essas variaveis deve-se usar ```@use <caminho para o arquivo> as c```, c para colors e t para tipografia. 
+
+# Diretrizes para o uso das bibliotecas
+
+- Priorize o uso do PrimeNG e de SCSS ao uso classico de CSS e HTML puro, mas não se exceda nesse uso e use CSS e HTML se necessário em casos simples e/ou triviais.
+
+- Ao usar SCSS utilize a sintaxe de nesting, sempre que possível, como no exemplo:
+
+```
+.alert, .warning {
+  ul, p {
+    margin-right: 0;
+    margin-left: 0;
+    padding-bottom: 0;
+  }
+}
+```
+
+# Diretizes de Sintaxe:
+
+- Evite exagero de comentários nos código providos.
+- Seja suncito nas explicações, mas nada muito curto.
+
+
+
+
+
