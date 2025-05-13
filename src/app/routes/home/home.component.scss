@@ -1,7 +1,10 @@
+@use '../../../assets/styles/_colors.scss' as c;
+
 .home-container {
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
+  color: c.$snow-white;
   
   h1 {
     margin-bottom: 1rem;
