@@ -1,0 +1,11 @@
+<header class="app-header">
+  <p-toolbar>
+    <ng-template class="start" #start>
+      <div class="flex items-center gap-2">
+        <p-button label="Início" [routerLink]="['/home']" routerLinkActive="p-button-primary" [routerLinkActiveOptions]="{exact: true}" text plain />
+        <p-button label="Sobre" [routerLink]="['/sobre']" routerLinkActive="p-button-primary" [routerLinkActiveOptions]="{exact: true}" text plain />
+      </div>
+    </ng-template>
+  </p-toolbar>
+</header>
+  
