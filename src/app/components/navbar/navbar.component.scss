@@ -1,0 +1,36 @@
+@use '../../../assets/styles/_colors.scss' as c;
+
+.app-header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0;
+}
+
+:host ::ng-deep {
+    p-toolbar { // Tag element
+        width: 80%;
+        
+        .p-toolbar {
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 3rem;
+            padding: 1rem 10rem 1rem 1.5rem;
+            width: 100%;
+            max-width: 2400px;
+
+
+            .p-button.p-button-text {
+                color: c.$snow-white;
+                font-weight: bold;
+            }
+        }
+
+    }
+}
