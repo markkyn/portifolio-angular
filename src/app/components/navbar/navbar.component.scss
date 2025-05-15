@@ -8,6 +8,47 @@
     display: flex;
     justify-content: center;
     padding: 1.5rem 0;
+    background-color: transparent;
+}
+
+.navbar {
+    width: 80%;
+    max-width: 2400px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 3rem;
+    padding: 1rem 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: c.$snow-white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+    
+    &.active {
+        background-color: c.$secondary-dark;
+        
+        &:hover {
+            background-color: lighten(c.$secondary-dark, 10%);
+        }
+    }
 }
 
 :host ::ng-deep {
