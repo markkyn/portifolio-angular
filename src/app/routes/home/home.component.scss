@@ -5,8 +5,47 @@
   max-width: 1200px;
   margin: 0 auto;
   color: c.$snow-white;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
   
   h1 {
     margin-bottom: 1rem;
+  }
+}
+
+.example-content {
+  h3 {
+    color: c.$terminal-orange;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+
+  pre {
+    background-color: c.$terminal-gray;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: 'Consolas', monospace;
+    margin-top: 1rem;
+    
+    &::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: c.$terminal-dark;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: c.$terminal-orange;
+      border-radius: 4px;
+    }
   }
 }

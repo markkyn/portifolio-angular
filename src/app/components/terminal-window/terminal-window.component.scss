@@ -1,0 +1,77 @@
+@use '../../../assets/styles/_colors.scss' as c;
+
+.terminal-window {
+  position: absolute;
+  min-width: 300px;
+  min-height: 200px;
+  background-color: c.$terminal-dark;
+  border: 2px solid c.$terminal-orange;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+  will-change: transform;
+  transform: translate(0, 0);
+  z-index: 10;
+}
+
+.window-header {
+  background-color: c.$terminal-orange;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: move;
+
+  &:hover {
+    background-color: c.$terminal-orange-light;
+  }
+
+  &:active {
+    cursor: grabbing;
+    background-color: c.$terminal-orange-lighter;
+  }
+}
+
+.window-title {
+  color: c.$terminal-dark;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: c.$terminal-dark;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0 4px;
+  font-size: 14px;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+.window-content {
+  flex: 1;
+  padding: 16px;
+  color: c.$white;
+  overflow: auto;
+  background-color: c.$terminal-dark;
+
+  pre {
+    background-color: c.$terminal-gray;
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 0;
+    font-family: 'Consolas', monospace;
+  }
+} 
