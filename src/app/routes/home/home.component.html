@@ -1,4 +1,20 @@
 <div class="home-container">
   <h1>{{ title }}</h1>
   <p>Bem-vindo ao meu portfólio!</p>
-</div> 
+
+  <app-terminal>
+    <app-terminal-window
+      [title]="'Assembly Reader'"
+      [position]="windowPosition">
+      <div class="example-content">
+        <h3>Bem-vindo ao Assembly Reader</h3>
+        <p>Este é um exemplo de conteúdo dentro da janela do terminal.</p>
+        <pre>
+          mov eax, 0x1
+          mov ebx, 0x2
+          add eax, ebx
+        </pre>
+      </div>
+    </app-terminal-window>
+  </app-terminal>
+</div>

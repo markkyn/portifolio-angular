@@ -1,0 +1,29 @@
+<div class="terminal-container">
+  <div class="terminal-content-area">
+    <!-- Área principal do terminal onde o histórico será exibido -->
+    <div class="command-history">
+      <div *ngFor="let command of commandHistory" class="command-line">{{ command }}</div>
+    </div>
+  </div>
+  
+  <!-- Área de prompt fixa na parte inferior -->
+  <div class="terminal-prompt-area">
+    <div #terminalPrompt class="terminal-prompt">
+      <div class="command-input">
+        <span class="prompt-symbol">&gt;</span>
+        <input
+          type="text"
+          [(ngModel)]="currentCommand"
+          (keydown)="onCommandSubmit($event)"
+          placeholder="Digite um comando..."
+          spellcheck="false"
+          autocomplete="off">
+      </div>
+    </div>
+  </div>
+  
+  <!-- Container para janelas, acima de tudo -->
+  <div class="windows-container">
+    <ng-content></ng-content>
+  </div>
+</div>
